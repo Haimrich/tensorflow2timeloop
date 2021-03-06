@@ -91,7 +91,7 @@ def convert_model(model, batch_size, model_name, save_dir):
             yaml = generate_DepthwiseConv2D(layer, batch_size, unique_layers, layers_info)
         elif isinstance(layer, layers.Conv2D):
             yaml = generate_Conv2D(layer, batch_size, unique_layers, layers_info)
-        elif isinstance(layer, layer.Dense):
+        elif isinstance(layer, layers.Dense):
             yaml = generate_Dense(layer, batch_size, unique_layers, layers_info)
 
         if yaml:
